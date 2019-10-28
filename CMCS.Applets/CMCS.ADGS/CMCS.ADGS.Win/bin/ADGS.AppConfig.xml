@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!--程序唯一标识-->
+  <AppIdentifier>化验设备通用取数</AppIdentifier>
+  <!--Oracle数据库连接字符串-->
+  <SelfConnStr>Data Source=SERVER6;User ID=Bieos_HnQy2;Password=1234;Persist Security Info=False;</SelfConnStr>
+  <!--提取间隔 单位：分钟-->
+  <GrabInterval>5</GrabInterval>
+  <!--Oracle关键字,多个使用“|”分割-->
+  <OracleKeywords>DATE|NUMBER|INDEX</OracleKeywords>
+  <!--开机启动-->
+  <Startup>False</Startup>
+  <!--需要提取数据的化验设备-->
+  <Instruments>
+
+    <!--
+    
+    注意事项：
+    1、设备编号不能重复
+    
+    
+    [内置抓取]  
+    <ByoGraber></ByoGraber>
+    必要参数:
+    MachineCode:设备编号
+    TableName:存储表名
+    PrimaryKeys:主键名,多个使用“|”分割
+    ConnStr:数据库连接字符串
+    DbType:数据库类型：Access、SqlServer、SQLite
+    SQL:数据查询语句
+    Enabled:是否启用
+    
+    
+    [自定义抓取]  
+    <CustomGraber></CustomGraber>
+    必要参数:
+    MachineCode:设备编号
+    TableName:存储表名
+    PrimaryKeys:主键名,多个使用“|”分割
+    ConnStr:数据库连接字符串
+    DbType:数据库类型：Access、SqlServer、SQLite
+    SQL:数据查询语句
+    DayRange:提取范围 单位：天
+    Enabled:是否启用
+    
+    -->
+
+    <!--[内置抓取] 长沙开元.量热仪 型号：5E-C5500A双控-->
+    <!--<ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#4量热仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYLry_SDC" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\110\SDCData.mdb;jet oledb:Database Password=199302" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from FResultdata where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#3量热仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYLry_SDC" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\111\SDCData.mdb;jet oledb:Database Password=199302" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from FResultdata where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#2量热仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYLry_SDC" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\112\SDCData.mdb;jet oledb:Database Password=199302" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from FResultdata where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#1量热仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYLry_SDC" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\113\SDCData.mdb;jet oledb:Database Password=199302" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from FResultdata where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+
+
+    --><!--[内置抓取] 长沙开元.测硫仪 型号：SDS212--><!--
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#1测硫仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYCly_SDS212" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="AutoNmb" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\114\SDS212Data.mdb;jet oledb:Database Password=service" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from SDS212 where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#2测硫仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYCly_SDS212" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="AutoNmb" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\115\SDS212Data.mdb;jet oledb:Database Password=service" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from SDS212 where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#3测硫仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYCly_SDS212" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="AutoNmb" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\116\SDS212Data.mdb;jet oledb:Database Password=service" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from SDS212 where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+
+
+    --><!--[内置抓取] 长沙开元.工分仪 型号：PxmAData2018--><!--
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#2工分仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYGfy_PxmAData2018" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="Autono" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\119\PxmAData2019.mdb;" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from TestData where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#1工分仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYGfy_PxmAData2018" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="Autono" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\121\PxmAData2019.mdb;" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from TestData where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+
+
+    --><!--[内置抓取] 长沙开元.水分仪 型号：--><!--
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#2水分仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYSfy_PxmAData" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="Autono" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\118\PxmAData.mdb;" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from TestData where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    <ByoGraber>
+      --><!--设备编号--><!--
+      <Param Key="MachineCode" Value="#1水分仪" />
+      --><!--存储表名--><!--
+      <Param Key="TableName" Value="HNQYSfy_Data" />
+      --><!--主键名,多个使用“|”分割--><!--
+      <Param Key="PrimaryKeys" Value="Autono" />
+      --><!--数据库连接字符串--><!--
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\120\PxmAData.mdb;" />
+      --><!--数据库类型：Access、SqlServer、SQLite--><!--
+      <Param Key="DbType" Value="Access" />
+      --><!--数据查询语句--><!--
+      <Param Key="SQL" Value="select * from TestData where TestDate > Date()-20 order by TestDate asc" />
+      --><!--是否启用--><!--
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>-->
+
+    <!--[内置抓取] 长沙开元.元素分析仪 型号：-->
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1元素分析仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYysfxy_Data" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="自动编号" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=G:\沁阳数据库\SDCHData2019.mdb;jet oledb:Database Password=service" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select 试样编号 as sampleNo,[样重(mg)] AS SampleWeight,[Nad%] AS Nad,[Had%] AS Had,[Cad%] AS Cad,化验员 AS TestMan,测试日期 as testDate,自动编号 from SDCH235 where 测试日期 > Date()-365 order by 测试日期 asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1灰融仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYHry_SDAF2000" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\105\SDAF2000.mdb;jet oledb:Database Password=service" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from txsj where syrq > Date()-360 order by syrq asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1入炉工分仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYGfy_PxmAData2018" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="Autono" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\入炉化验设备数据\工分仪1\PxmAData2019.mdb;" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from TestData where TestDate > Date()-360 order by TestDate asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1入炉测硫仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYCly_SDS212" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="AutoNmb" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\入炉化验设备数据\定硫仪1\SDS212Data.mdb;jet oledb:Database Password=service" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from SDS212 where TestDate > Date()-360 order by TestDate asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1入炉量热仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYLry_SDC" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\入炉化验设备数据\量热仪1\SDCData.mdb;jet oledb:Database Password=199302" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from FResultdata where TestDate > Date()-360 order by TestDate asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+    
+    
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#2入炉量热仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYLry_SDC" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\入炉化验设备数据\量热仪2\SDCData.mdb;jet oledb:Database Password=199302" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from FResultdata where TestDate > Date()-360 order by TestDate asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1入炉水分仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYSfy_PxmAData" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="Autono" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\入炉化验设备数据\水分仪1\PxmAData.mdb;" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from TestData where TestDate > Date()-360 order by TestDate asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+
+    <ByoGraber>
+      <!--设备编号-->
+      <Param Key="MachineCode" Value="#1入炉灰融仪" />
+      <!--存储表名-->
+      <Param Key="TableName" Value="HNQYHry_SDAF2000" />
+      <!--主键名,多个使用“|”分割-->
+      <Param Key="PrimaryKeys" Value="AutoNo" />
+      <!--数据库连接字符串-->
+      <Param Key="ConnStr" Value="Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info =true;Data Source=D:\化验数据\入炉化验设备数据\灰融仪1\SDAF2000.mdb;jet oledb:Database Password=service" />
+      <!--数据库类型：Access、SqlServer、SQLite-->
+      <Param Key="DbType" Value="Access" />
+      <!--数据查询语句-->
+      <Param Key="SQL" Value="select * from txsj where syrq > Date()-360 order by syrq asc" />
+      <!--是否启用-->
+      <Param Key="Enabled" Value="True" />
+    </ByoGraber>
+  </Instruments>
+</root>

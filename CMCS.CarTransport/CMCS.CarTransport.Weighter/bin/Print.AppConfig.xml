@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CommonAppConfig>
+<!-- 二维码左边空余多少,单位：像素-->
+<ImgLeftPadding>30</ImgLeftPadding>
+<!--二维码上面空余多少,单位：像素-->
+<ImgTopPadding>10</ImgTopPadding>
+<!-- 二维码宽度-->
+<ImgSize>3</ImgSize>
+<!--下方明码距二维码的距离,单位：像素-->
+<CharToImg>15</CharToImg>
+<!--下方明码左边空余位置,单位：像素-->
+<CharLeftPadding>10</CharLeftPadding>
+<!--除开标题外下面内容字体大小，默认：17-->
+<FontSize>14</FontSize>
+<!--除开前面四个字和冒号后一行最多显示的汉字数量，默认：7-->
+<RowMaxChaNums>21</RowMaxChaNums>
+<!--发票打印多少联-->
+<PrintNums>1</PrintNums>
+<!--行间距-->
+<CharLineSpacing>20</CharLineSpacing>
+</CommonAppConfig>
+

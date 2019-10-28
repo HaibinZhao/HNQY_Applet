@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{876E357B-8180-4060-87F5-5D5C11E29E4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMCS.DumblyConcealer</RootNamespace>
+    <AssemblyName>CMCS.DumblyConcealer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.5.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\CMCS.DumblyConcealer.Win\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DcDbers.cs" />
+    <Compile Include="Enums\eOutputType.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\AssayTemp.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\HNQYHry_SDAF2000.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\HNQYLry_SDC.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\HNQYCly_SDS212.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\HNQYSfy_PxmAData.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\HNQYGfy_PxmAData2018.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\HNQYysfxy_Data.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tasks\AssayDevice\EquAssayDeviceDAO.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\LRY_5EC5500A.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\SFY_5EMW6510.cs" />
+    <Compile Include="Tasks\AssayDevice\Entities\CLY_5E8SAII.cs" />
+    <Compile Include="Tasks\AssayDevice\HNQYEquAssayDeviceDAO.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\EquAutoCupboard_NCGM_DAO.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\Entities\EquCYGBill.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\Entities\EquCYGBillRecord.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\Entities\EquCYGDataFlag.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\Entities\EquCYGError.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\Entities\EquCYGSam.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\Entities\EquCYGSignal.cs" />
+    <Compile Include="Tasks\AutoCupboard_NCGM\Enums\eYPLX.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJDataFlag.cs" />
+    <Compile Include="Tasks\AutoMaker\Enums\eFuelKindName.cs" />
+    <Compile Include="Tasks\AutoMaker\Enums\eMt.cs" />
+    <Compile Include="Tasks\AutoMaker\EquAutoMakerDAO.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJSignal.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJPlan.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJDetail.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJCmd.cs" />
+    <Compile Include="Tasks\AutoMaker\Entities\EquQZDZYJError.cs" />
+    <Compile Include="Tasks\BeltSampler\Entities\EquPDCYJUnloadResult.cs" />
+    <Compile Include="Tasks\BeltSampler\EquBeltSamplerDAO.cs" />
+    <Compile Include="Enums\eMachineCode.cs" />
+    <Compile Include="Tasks\BeltSampler\Entities\EquPDCYJError.cs" />
+    <Compile Include="Tasks\BeltSampler\Entities\EquPDCYJCmd.cs" />
+    <Compile Include="Tasks\BeltSampler\Entities\EquPDCYJUnloadCmd.cs" />
+    <Compile Include="Tasks\BeltSampler\Entities\EquPDCYJPlan.cs" />
+    <Compile Include="Tasks\BeltSampler\Entities\EquPDCYJBarrel.cs" />
+    <Compile Include="Tasks\BeltSampler\Entities\EquPDCYJSignal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\BeltSampler\Enums\eMt.cs" />
+    <Compile Include="Tasks\BeltSampler\Enums\eFuelKindName.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\CMD_TB.cs" />
+    <Compile Include="Tasks\CarJxSampler\EquCarJXSamplerDAO.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJUnloadCmd.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJUnloadResult.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJSignal.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJBarrel.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJError.cs" />
+    <Compile Include="Tasks\CarJxSampler\Entities\EquQCJXCYJSampleCmd.cs" />
+    <Compile Include="Tasks\DataHandler\DataHandlerDAO.cs" />
+    <Compile Include="Tasks\DataHandler\Entities\CmcstbGuardinfo.cs" />
+    <Compile Include="Tasks\DataHandler\Entities\Result.cs" />
+    <Compile Include="Tasks\DataHandler\Enums\eEventCode.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\InfQDBill.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\InfQDDeviceRealtimeStatus.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\InfQDError.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\InfQDStatus.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\InfQDSampleStatus.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\InfQDDeviceCode.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\QD_Record_Tb.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Entities\Warining_Info.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Enums\eOp.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\PneumaticTransfer_XMJS_DAO.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Sample\CmcsCYGSams.cs" />
+    <Compile Include="Tasks\PneumaticTransfer_XMJS\Sample\SampleInputBags.cs" />
+    <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorDAO.cs" />
+    <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorDBW.cs" />
+    <Compile Include="Tasks\TrainDiscriminator\TrainDiscriminatorTCPIP.cs" />
+    <Compile Include="Tasks\WeightBridger\Entities\Lwcarsinfo.cs" />
+    <Compile Include="Tasks\WeightBridger\EquWeightBridgerDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.Common\CMCS.Common.csproj">
+      <Project>{8DB8A68D-079F-4825-A9F4-C6FF78D799EB}</Project>
+      <Name>CMCS.Common %28CMCS.Common\CMCS.Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.DapperDber\CMCS.DapperDber.csproj">
+      <Project>{6384F3D5-7CB5-4D1F-8A1F-3FA9B0A78F05}</Project>
+      <Name>CMCS.DapperDber</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tasks\AssayDevice\化验数据同步接口.txt" />
+    <Content Include="Tasks\AutoCupboard_NCGM\光明存样柜.txt" />
+    <Content Include="Tasks\AutoMaker\全自动制样机接口.txt" />
+    <Content Include="Tasks\BeltSampler\皮带采样机接口.txt" />
+    <Content Include="Tasks\CarJxSampler\长沙万通汽车机械采样机接口.txt" />
+    <Content Include="Tasks\DataHandler\综合事件处理.txt" />
+    <Content Include="Tasks\PneumaticTransfer_XMJS\气动传输.txt" />
+    <Content Include="Tasks\TrainDiscriminator\车号识别数据接口.txt" />
+    <Content Include="Tasks\WeightBridger\火车轨道衡数据同步程序.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

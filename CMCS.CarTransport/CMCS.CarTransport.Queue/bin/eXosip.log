@@ -1,0 +1,9 @@
+| INFO2 | -1 <z:\sip\sip\libexosip2-3.6.0\src\exutils.c: 824> getaddrinfo returned the following addresses:
+| INFO2 | -1 <z:\sip\sip\libexosip2-3.6.0\src\exutils.c: 830> 0.0.0.0 port 8438
+| INFO2 | 1 <z:\sip\sip\libexosip2-3.6.0\src\exconf.c: 769> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 10001 <z:\sip\sip\libexosip2-3.6.0\src\exconf.c: 769> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 20002 <z:\sip\sip\libexosip2-3.6.0\src\exconf.c: 769> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 30002 <z:\sip\sip\libexosip2-3.6.0\src\exconf.c: 769> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 40003 <z:\sip\sip\libexosip2-3.6.0\src\exconf.c: 769> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 50003 <z:\sip\sip\libexosip2-3.6.0\src\exconf.c: 769> eXosip: Reseting timer to 10s before waking up!
+| INFO2 | 60004 <z:\sip\sip\libexosip2-3.6.0\src\exconf.c: 769> eXosip: Reseting timer to 10s before waking up!

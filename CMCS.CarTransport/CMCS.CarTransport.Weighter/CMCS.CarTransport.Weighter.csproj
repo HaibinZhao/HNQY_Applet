@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62D29056-3A63-47B7-AD03-158F9991FAE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMCS.CarTransport.Weighter</RootNamespace>
+    <AssemblyName>CMCS.CarTransport.Weighter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AU, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AU.dll</HintPath>
+    </Reference>
+    <Reference Include="BasisPlatform, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\BasisPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.5.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CMCS.Monitor\CMCS.Monitor.Win\bin\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.5.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetSpeech, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\DotNetSpeech.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4489.42329, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\DataItem.cs" />
+    <Compile Include="Core\Hardwarer.cs" />
+    <Compile Include="Core\ImperfectCar.cs" />
+    <Compile Include="Core\IocControler.cs" />
+    <Compile Include="Core\PassCarQueuer.cs" />
+    <Compile Include="Core\UnLoadLEDDAO.cs" />
+    <Compile Include="Core\VoiceSpeaker.cs" />
+    <Compile Include="Enums\eFlowFlag.cs" />
+    <Compile Include="Enums\eDirection.cs" />
+    <Compile Include="Frms\FrmUnFinishTransport_Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmUnFinishTransport_Select.Designer.cs">
+      <DependentUpon>FrmUnFinishTransport_Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\FrmWeighter_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmWeighter_Print.Designer.cs">
+      <DependentUpon>FrmWeighter_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\FrmWeighter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmWeighter.Designer.cs">
+      <DependentUpon>FrmWeighter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\FrmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\Sys\FrmDebugConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\Sys\FrmDebugConsole.Designer.cs">
+      <DependentUpon>FrmDebugConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\Sys\FrmMainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\Sys\FrmMainFrame.Designer.cs">
+      <DependentUpon>FrmMainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\PrintAppConfig.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\SelfVars.cs" />
+    <Compile Include="Utilities\SuperTabControlManager.cs" />
+    <EmbeddedResource Include="Frms\FrmUnFinishTransport_Select.resx">
+      <DependentUpon>FrmUnFinishTransport_Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\FrmWeighter_Print.resx">
+      <DependentUpon>FrmWeighter_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\FrmWeighter.resx">
+      <DependentUpon>FrmWeighter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\Sys\FrmDebugConsole.resx">
+      <DependentUpon>FrmDebugConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\Sys\FrmMainFrame.resx">
+      <DependentUpon>FrmMainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="bin\CMCS.CarTransport.Weighter.exe.config" />
+    <None Include="bin\CMCS.CarTransport.Weighter.vshost.exe.config" />
+    <None Include="bin\CMCS.CarTransport.Weighter.vshost.exe.manifest" />
+    <None Include="bin\DH\Config.ini" />
+    <None Include="bin\DH\DPSDK_Core.exp" />
+    <None Include="bin\DH\dpsdk_core.idb" />
+    <None Include="bin\DH\DPSDK_Core.lib" />
+    <None Include="bin\DH\DPSDK_Ext.exp" />
+    <None Include="bin\DH\dpsdk_ext.idb" />
+    <None Include="bin\DH\DPSDK_Ext.lib" />
+    <None Include="bin\DH\eXosip.log" />
+    <None Include="bin\DH\PlatformSDK.exp" />
+    <None Include="bin\DH\platformsdk.idb" />
+    <None Include="bin\DH\PlatformSDK.lib" />
+    <None Include="bin\DH\Test_DPSDK_DLL_CSharp.exe.config" />
+    <None Include="bin\DH\Test_DPSDK_DLL_CSharp.vshost.exe.config" />
+    <None Include="bin\DH\Test_DPSDK_DLL_CSharp.vshost.exe.manifest" />
+    <None Include="bin\DH\Vaxplayer.ini" />
+    <None Include="bin\HCNetSDKCom\HCAlarm.lib" />
+    <None Include="bin\HCNetSDKCom\HCGeneralCfgMgr.lib" />
+    <None Include="bin\HCNetSDKCom\HCPreview.lib" />
+    <None Include="bin\log4net.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.Common\CMCS.Common.csproj">
+      <Project>{8DB8A68D-079F-4825-A9F4-C6FF78D799EB}</Project>
+      <Name>CMCS.Common %28CMCS.Common\CMCS.Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.DapperDber\CMCS.DapperDber.csproj">
+      <Project>{6384F3D5-7CB5-4D1F-8A1F-3FA9B0A78F05}</Project>
+      <Name>CMCS.DapperDber</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.DotNetBar.Utilities\CMCS.DotNetBar.Utilities.csproj">
+      <Project>{AB80688E-8CFE-4E41-AF48-090EEE8553BA}</Project>
+      <Name>CMCS.DotNetBar.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Common\CMCS.Forms.UserControls\CMCS.Forms.UserControls.csproj">
+      <Project>{543ED9EB-DADE-4694-BA6C-7ECEAA5D135C}</Project>
+      <Name>CMCS.Forms.UserControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Hardware\HikVisionSDK.Core\HikVisionSDK.Core.csproj">
+      <Project>{3C06E562-08C1-44F5-A735-C0A14CC94A7F}</Project>
+      <Name>HikVisionSDK.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Hardware\IOC.YTWI8DOMR\IOC.JMDMYTWI8DOMR.csproj">
+      <Project>{84605edc-cf72-4200-9fc6-9c989b48dc1e}</Project>
+      <Name>IOC.JMDMYTWI8DOMR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Hardware\LED.YB14\LED.YB14.csproj">
+      <Project>{85632121-2FB7-46EF-8F72-150DCC71E472}</Project>
+      <Name>LED.YB14</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Hardware\RW.LZR12\RW.LZR12.csproj">
+      <Project>{D9A0FB66-C657-41F2-9915-7A3F0767C621}</Project>
+      <Name>RW.LZR12</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CMCS.Hardware\WB.TOLEDO.IND245\WB.TOLEDO.IND245.csproj">
+      <Project>{481548C1-51EB-42C6-AD05-E0364E4A3AAA}</Project>
+      <Name>WB.TOLEDO.IND245</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMCS.CarTransport\CMCS.CarTransport.csproj">
+      <Project>{5ED15A98-0895-48D3-851C-088A217D41E7}</Project>
+      <Name>CMCS.CarTransport %28CMCS.CarTransport\CMCS.CarTransport%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AU.dll" />
+    <Content Include="bin\AudioRender.dll" />
+    <Content Include="bin\AutoUpdater.exe" />
+    <Content Include="bin\BasisPlatform.dll" />
+    <Content Include="bin\BasisPlatform.XML" />
+    <Content Include="bin\borlndmm.dll" />
+    <Content Include="bin\Camera\摄像机抓拍照片存放路径.txt" />
+    <Content Include="bin\CMCS.CarTransport.dll" />
+    <Content Include="bin\CMCS.CarTransport.pdb" />
+    <Content Include="bin\CMCS.CarTransport.Weighter.exe" />
+    <Content Include="bin\CMCS.CarTransport.Weighter.pdb" />
+    <Content Include="bin\CMCS.CarTransport.Weighter.vshost.exe" />
+    <Content Include="bin\CMCS.Common.dll" />
+    <Content Include="bin\CMCS.Common.pdb" />
+    <Content Include="bin\CMCS.DapperDber.dll" />
+    <Content Include="bin\CMCS.DapperDber.pdb" />
+    <Content Include="bin\CMCS.DapperDber.xml" />
+    <Content Include="bin\CMCS.DotNetBar.Utilities.dll" />
+    <Content Include="bin\CMCS.DotNetBar.Utilities.pdb" />
+    <Content Include="bin\CMCS.Forms.UserControls.dll" />
+    <Content Include="bin\CMCS.Forms.UserControls.pdb" />
+    <Content Include="bin\Common.AppConfig.xml" />
+    <Content Include="bin\DevComponents.DotNetBar.SuperGrid.dll" />
+    <Content Include="bin\DevComponents.DotNetBar2.dll" />
+    <Content Include="bin\DevComponents.DotNetBar2.xml" />
+    <Content Include="bin\DevComponents.Instrumentation.dll" />
+    <Content Include="bin\DevComponents.Instrumentation.xml" />
+    <Content Include="bin\DH\aacdec.dll" />
+    <Content Include="bin\DH\adpcmdec.dll" />
+    <Content Include="bin\DH\amrdec.dll" />
+    <Content Include="bin\DH\AnalyzeData.dll" />
+    <Content Include="bin\DH\AnalyzeData.pdb" />
+    <Content Include="bin\DH\AudioRender.pdb" />
+    <Content Include="bin\DH\avcodec-55.dll" />
+    <Content Include="bin\DH\avutil-52.dll" />
+    <Content Include="bin\DH\BluestarAdaptor.pdb" />
+    <Content Include="bin\DH\BSRPlayer.pdb" />
+    <Content Include="bin\DH\d3dx9_24.dll" />
+    <Content Include="bin\DH\DahuaAdaptor.dll" />
+    <Content Include="bin\DH\DahuaAdaptor.pdb" />
+    <Content Include="bin\DH\DB33LiYuanAdaptor.pdb" />
+    <Content Include="bin\DH\DfwlAdaptor.pdb" />
+    <Content Include="bin\DH\dhconfigsdk.dll" />
+    <Content Include="bin\DH\DhHevcParserlib.dll" />
+    <Content Include="bin\DH\dhnetsdk.dll" />
+    <Content Include="bin\DH\dhplay.dll" />
+    <Content Include="bin\DH\dhplay.pdb" />
+    <Content Include="bin\DH\dhstream.dll" />
+    <Content Include="bin\DH\dhstream.pdb" />
+    <Content Include="bin\DH\dllh264.dll" />
+    <Content Include="bin\DH\dllmpeg4.dll" />
+    <Content Include="bin\DH\DPSDK_Core.dll" />
+    <Content Include="bin\DH\dpsdk_core.pdb" />
+    <Content Include="bin\DH\DPSDK_Ext.dll" />
+    <Content Include="bin\DH\dpsdk_ext.pdb" />
+    <Content Include="bin\DH\dslalien.dll" />
+    <Content Include="bin\DH\dslalien.pdb" />
+    <Content Include="bin\DH\dslalien_d.dll" />
+    <Content Include="bin\DH\dslalien_d.pdb" />
+    <Content Include="bin\DH\EFSAdapter.dll" />
+    <Content Include="bin\DH\EFSClient.dll" />
+    <Content Include="bin\DH\EFSHelper.dll" />
+    <Content Include="bin\DH\Enc_Mpeg4.dll" />
+    <Content Include="bin\DH\fisheye.dll" />
+    <Content Include="bin\DH\fisheye.pdb" />
+    <Content Include="bin\DH\FT_ParseFactoryType.dll" />
+    <Content Include="bin\DH\FT_ParseFactoryType.pdb" />
+    <Content Include="bin\DH\g7221dec.dll" />
+    <Content Include="bin\DH\g729dec.dll" />
+    <Content Include="bin\DH\H264ConvMp4.dll" />
+    <Content Include="bin\DH\h264dec.dll" />
+    <Content Include="bin\DH\h264dec.pdb" />
+    <Content Include="bin\DH\h264declib.pdb" />
+    <Content Include="bin\DH\H264Parser.dll" />
+    <Content Include="bin\DH\h26ldec.dll" />
+    <Content Include="bin\DH\h3cAdaptor.pdb" />
+    <Content Include="bin\DH\HanbangAdaptor.pdb" />
+    <Content Include="bin\DH\HaoTeAdaptor.pdb" />
+    <Content Include="bin\DH\HaoyunAdaptor.pdb" />
+    <Content Include="bin\DH\HBPlaySDK.pdb" />
+    <Content Include="bin\DH\HengtongAdaptor.pdb" />
+    <Content Include="bin\DH\hevcdec.dll" />
+    <Content Include="bin\DH\hevcdec.pdb" />
+    <Content Include="bin\DH\HighEasyAdaptor.pdb" />
+    <Content Include="bin\DH\HikAdaptor.pdb" />
+    <Content Include="bin\DH\HuangheAdaptor.pdb" />
+    <Content Include="bin\DH\Huanshi2Adaptor.pdb" />
+    <Content Include="bin\DH\HuanshiAdaptor.pdb" />
+    <Content Include="bin\DH\HWDec.dll" />
+    <Content Include="bin\DH\HWDec.pdb" />
+    <Content Include="bin\DH\Inframd.dll" />
+    <Content Include="bin\DH\inframd.pdb" />
+    <Content Include="bin\DH\Inframdd.dll" />
+    <Content Include="bin\DH\inframdd.pdb" />
+    <Content Include="bin\DH\IvsDrawer.dll" />
+    <Content Include="bin\DH\IvseDll.dll" />
+    <Content Include="bin\DH\IvseDll.pdb" />
+    <Content Include="bin\DH\JingyangAdaptor.pdb" />
+    <Content Include="bin\DH\JoveAdaptor.pdb" />
+    <Content Include="bin\DH\JoveCardAdaptor.pdb" />
+    <Content Include="bin\DH\kaerAdaptor.pdb" />
+    <Content Include="bin\DH\LangchiAdaptor.pdb" />
+    <Content Include="bin\DH\LibAACEnc.dll" />
+    <Content Include="bin\DH\libdsl.dll" />
+    <Content Include="bin\DH\libdsl.pdb" />
+    <Content Include="bin\DH\libdsl_d.dll" />
+    <Content Include="bin\DH\libdsl_d.pdb" />
+    <Content Include="bin\DH\liyuan_v1.pdb" />
+    <Content Include="bin\DH\MCL_FPTZ.dll" />
+    <Content Include="bin\DH\MCL_FPTZ.pdb" />
+    <Content Include="bin\DH\mediaSDK.dll" />
+    <Content Include="bin\DH\mjpegdec.dll" />
+    <Content Include="bin\DH\mp2dec.dll" />
+    <Content Include="bin\DH\mp3dec.dll" />
+    <Content Include="bin\DH\mp4.dll" />
+    <Content Include="bin\DH\mpeg4dec.dll" />
+    <Content Include="bin\DH\mpeg4dec.pdb" />
+    <Content Include="bin\DH\mpeg4enc.dll" />
+    <Content Include="bin\DH\oggdec.dll" />
+    <Content Include="bin\DH\OmniMediaParser.pdb" />
+    <Content Include="bin\DH\OpenHevcLib.pdb" />
+    <Content Include="bin\DH\PicSDK.dll" />
+    <Content Include="bin\DH\PlatformSDK.dll" />
+    <Content Include="bin\DH\platformsdk.pdb" />
+    <Content Include="bin\DH\PlayCtrl.pdb" />
+    <Content Include="bin\DH\PlayM4.dll" />
+    <Content Include="bin\DH\postproc.dll" />
+    <Content Include="bin\DH\SG_Package.pdb" />
+    <Content Include="bin\DH\speech_enhance.dll" />
+    <Content Include="bin\DH\StreamAnalyzer.dll" />
+    <Content Include="bin\DH\StreamAnalyzer.pdb" />
+    <Content Include="bin\DH\StreamConvertor.dll" />
+    <Content Include="bin\DH\StreamConvertor.pdb" />
+    <Content Include="bin\DH\StreamConvertord.dll" />
+    <Content Include="bin\DH\StreamConvertord.pdb" />
+    <Content Include="bin\DH\StreamConvertormd.dll" />
+    <Content Include="bin\DH\StreamConvertormd.pdb" />
+    <Content Include="bin\DH\StreamConvertormdd.dll" />
+    <Content Include="bin\DH\StreamConvertormdd.pdb" />
+    <Content Include="bin\DH\Streampackagemd.pdb" />
+    <Content Include="bin\DH\StreamParsermd.pdb" />
+    <Content Include="bin\DH\StreamParsermdd.pdb" />
+    <Content Include="bin\DH\SuperRender.pdb" />
+    <Content Include="bin\DH\svac_dec.dll" />
+    <Content Include="bin\DH\swscale.dll" />
+    <Content Include="bin\DH\Test_DPSDK_DLL_CSharp.exe" />
+    <Content Include="bin\DH\Test_DPSDK_DLL_CSharp.pdb" />
+    <Content Include="bin\DH\TiandyAdaptor.pdb" />
+    <Content Include="bin\DH\TianyueAdaptor.pdb" />
+    <Content Include="bin\DH\tiffenc.dll" />
+    <Content Include="bin\DH\TSClientDemo.pdb" />
+    <Content Include="bin\DH\TSParse.dll" />
+    <Content Include="bin\DH\TSParse.pdb" />
+    <Content Include="bin\DH\VAXPlayer.dll" />
+    <Content Include="bin\DH\VAXPlayer.pdb" />
+    <Content Include="bin\DH\VideoEncode.dll" />
+    <Content Include="bin\DH\VideoEncode.pdb" />
+    <Content Include="bin\DH\xwcodec.pdb" />
+    <Content Include="bin\DH\ZhongshiAdaptor.pdb" />
+    <Content Include="bin\DotNetSpeech.dll" />
+    <Content Include="bin\DPSDK_Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\dpsdk_core.pdb" />
+    <Content Include="bin\DPSDK_Ext.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\HCCore.dll" />
+    <Content Include="bin\HCNetSDK.dll" />
+    <Content Include="bin\HCNetSDKCom\AnalyzeData.dll" />
+    <Content Include="bin\HCNetSDKCom\AudioIntercom.dll" />
+    <Content Include="bin\HCNetSDKCom\DsSdk.dll" />
+    <Content Include="bin\HCNetSDKCom\HCAlarm.dll" />
+    <Content Include="bin\HCNetSDKCom\HCCoreDevCfg.dll" />
+    <Content Include="bin\HCNetSDKCom\HCDisplay.dll" />
+    <Content Include="bin\HCNetSDKCom\HCGeneralCfgMgr.dll" />
+    <Content Include="bin\HCNetSDKCom\HCIndustry.dll" />
+    <Content Include="bin\HCNetSDKCom\HCPlayBack.dll" />
+    <Content Include="bin\HCNetSDKCom\HCPreview.dll" />
+    <Content Include="bin\HCNetSDKCom\HCVoiceTalk.dll" />
+    <Content Include="bin\HCNetSDKCom\libiconv2.dll" />
+    <Content Include="bin\HCNetSDKCom\msvcr90.dll" />
+    <Content Include="bin\HCNetSDKCom\OpenAL32.dll" />
+    <Content Include="bin\HCNetSDKCom\StreamTransClient.dll" />
+    <Content Include="bin\HCNetSDKCom\SystemTransform.dll" />
+    <Content Include="bin\HikVisionSDK.Core.dll" />
+    <Content Include="bin\HikVisionSDK.Core.pdb" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\IOC.JMDM20DIOV2.dll" />
+    <Content Include="bin\IOC.JMDM20DIOV2.pdb" />
+    <Content Include="bin\LED.YB14.dll" />
+    <Content Include="bin\LED.YB14.pdb" />
+    <Content Include="bin\Led1TempFile.txt" />
+    <Content Include="bin\LedDynamicArea.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\PlayCtrl.dll" />
+    <Content Include="bin\RfidApiLib.dll" />
+    <Content Include="bin\RW.LZR12.dll" />
+    <Content Include="bin\RW.LZR12.pdb" />
+    <Content Include="bin\SuperRender.dll" />
+    <Content Include="bin\System.Data.SQLite.dll" />
+    <Content Include="bin\update.xml" />
+    <Content Include="bin\WB.TOLEDO.IND245.dll" />
+    <Content Include="bin\WB.TOLEDO.IND245.pdb" />
+    <Content Include="icon.ico" />
+    <Content Include="称重计量程序.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

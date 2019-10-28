@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CommonAppConfig>
+  <!--程序唯一标识-->
+  <AppIdentifier>磅单打印</AppIdentifier>
+  <!--集中管控Oracle数据库连接字符串-->
+  <SelfConnStr>Data Source=serverqy;User ID=bieos_hnqy;Password=1234;Persist Security Info=False;</SelfConnStr>
+<!--除开标题外下面内容字体大小，默认：17-->
+<FontSize>17</FontSize>
+<!--除开前面四个字和冒号后一行最多显示的汉字数量，默认：7-->
+<RowMaxChaNums>7</RowMaxChaNums>
+<!--发票打印多少联-->
+<PrintNums>1</PrintNums>
+<!--左边距-->
+<LeftPadding>10</LeftPadding>
+</CommonAppConfig>
+
