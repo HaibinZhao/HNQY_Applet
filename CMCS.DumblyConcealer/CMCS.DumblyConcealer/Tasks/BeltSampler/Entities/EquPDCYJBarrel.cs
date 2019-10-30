@@ -9,7 +9,7 @@ namespace CMCS.DumblyConcealer.Tasks.BeltSampler.Entities
     /// <summary>
     /// 皮带采样机接口表 - 实时集样罐
     /// </summary>
-    [CMCS.DapperDber.Attrs.DapperBind("EquTbHCPDCYJBarrel")]
+    [CMCS.DapperDber.Attrs.DapperBind("EquTbPDCYJBarrel")]
     public class EquPDCYJBarrel : EntityBase2
     {
         private string machineCode;

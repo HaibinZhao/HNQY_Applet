@@ -9,7 +9,7 @@ namespace CMCS.DumblyConcealer.Tasks.BeltSampler.Entities
     /// <summary>
     /// 皮带采样机接口表 - 卸样结果
     /// </summary>
-    [CMCS.DapperDber.Attrs.DapperBind("EquTbHCPDCYJUnloadResult")]
+    [CMCS.DapperDber.Attrs.DapperBind("EquTbPDCYJUnloadResult")]
     public class EquPDCYJUnloadResult : EntityBase2
     {
         private string machineCode;

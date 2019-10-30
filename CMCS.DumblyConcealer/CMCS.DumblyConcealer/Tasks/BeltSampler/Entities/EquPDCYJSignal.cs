@@ -10,7 +10,7 @@ namespace CMCS.DumblyConcealer.Tasks.BeltSampler.Entities
     /// <summary>
     /// 皮带采样机接口表 - 实时信号
     /// </summary>
-    [CMCS.DapperDber.Attrs.DapperBind("EquTbHCPDCYJSignal")]
+    [CMCS.DapperDber.Attrs.DapperBind("equtbpdcyjsignal")]
     public class EquPDCYJSignal : EntityBase2
     {
         private string machineCode;

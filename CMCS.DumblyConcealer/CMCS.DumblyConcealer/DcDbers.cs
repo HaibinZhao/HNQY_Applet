@@ -13,74 +13,87 @@ using CMCS.Common.Utilities;
 
 namespace CMCS.DumblyConcealer
 {
-    /// <summary>
-    /// 数据库访问
-    /// </summary>
-    public class DcDbers
-    {
-        private static DcDbers instance;
+	/// <summary>
+	/// 数据库访问
+	/// </summary>
+	public class DcDbers
+	{
+		private static DcDbers instance;
 
-        public static DcDbers GetInstance()
-        {
-            if (instance == null)
-            {
-                instance = new DcDbers();
-            }
+		public static DcDbers GetInstance()
+		{
+			if (instance == null)
+			{
+				instance = new DcDbers();
+			}
 
-            return instance;
-        }
+			return instance;
+		}
 
-        CommonDAO commonDAO = CommonDAO.GetInstance();
+		CommonDAO commonDAO = CommonDAO.GetInstance();
 
-        private DcDbers()
-        {
-            BeltSampler_Dber = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("皮带采样机接口连接字符串"));
-            AutoCupboard_Dber = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#1智能存样柜接口连接字符串"));
-            AutoCupboard_Dber2 = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#2智能存样柜接口连接字符串"));
-            PneumaticTransfer_Dber = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("气动传输接口连接字符串"));
+		private DcDbers()
+		{
+			try
+			{
+				BeltSampler_Dber1 = new OracleDapperDber(commonDAO.GetCommonAppletConfigString("皮带采样机1接口连接字符串"));
+				BeltSampler_Dber2 = new OracleDapperDber(commonDAO.GetCommonAppletConfigString("皮带采样机2接口连接字符串"));
+				AutoCupboard_Dber = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#1智能存样柜接口连接字符串"));
+				AutoCupboard_Dber2 = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#2智能存样柜接口连接字符串"));
+				PneumaticTransfer_Dber = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("气动传输接口连接字符串"));
 
-            WeightBridger_Dber = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("轨道衡数据库连接字符串"));
-            CarJXSampler_Dber1 = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#1汽车机械采样机接口连接字符串"));
-            CarJXSampler_Dber2 = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#2汽车机械采样机接口连接字符串"));
-        }
+				WeightBridger_Dber = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("轨道衡数据库连接字符串"));
+				CarJXSampler_Dber1 = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#1汽车机械采样机接口连接字符串"));
+				CarJXSampler_Dber2 = new SqlServerDapperDber(commonDAO.GetCommonAppletConfigString("#2汽车机械采样机接口连接字符串"));
+			}
+			catch (Exception ex)
+			{
+				Log4Neter.Error("初始化第三方接口连接字符串", ex);
+			}
+		}
 
-        void Dber_SqlWatch(string type, string sql)
-        {
-            Log4Neter.Info(sql);
-        }
+		void Dber_SqlWatch(string type, string sql)
+		{
+			Log4Neter.Info(sql);
+		}
 
-        /// <summary>
-        /// 皮带采样机接口
-        /// </summary>
-        public SqlServerDapperDber BeltSampler_Dber;
-        /// <summary>
-        /// 智能存样柜接口
-        /// </summary>
-        public SqlServerDapperDber AutoCupboard_Dber;
-        /// <summary>
-        /// 智能存样柜接口2
-        /// </summary>
-        public SqlServerDapperDber AutoCupboard_Dber2;
-        /// <summary>
-        /// 气动传输接口
-        /// </summary>
-        public SqlServerDapperDber PneumaticTransfer_Dber;
+		/// <summary>
+		/// 皮带采样机接口1
+		/// </summary>
+		public OracleDapperDber BeltSampler_Dber1;
 
-        /// <summary>
-        /// #1汽车机械采样机接口
-        /// </summary>
-        public SqlServerDapperDber CarJXSampler_Dber1;
-        /// <summary>
-        /// #2汽车机械采样机接口
-        /// </summary>
-        public SqlServerDapperDber CarJXSampler_Dber2;
-        /// <summary>
-        /// #3汽车机械采样机接口
-        /// </summary>
-        public SqlServerDapperDber CarJXSampler_Dber3;
-        /// <summary>
-        /// 轨道衡数据库链接
-        /// </summary>
-        public SqlServerDapperDber WeightBridger_Dber;
-    }
+		/// <summary>
+		/// 皮带采样机接口2
+		/// </summary>
+		public OracleDapperDber BeltSampler_Dber2;
+		/// <summary>
+		/// 智能存样柜接口
+		/// </summary>
+		public SqlServerDapperDber AutoCupboard_Dber;
+		/// <summary>
+		/// 智能存样柜接口2
+		/// </summary>
+		public SqlServerDapperDber AutoCupboard_Dber2;
+		/// <summary>
+		/// 气动传输接口
+		/// </summary>
+		public SqlServerDapperDber PneumaticTransfer_Dber;
+
+		/// <summary>
+		/// #1汽车机械采样机接口
+		/// </summary>
+		public SqlServerDapperDber CarJXSampler_Dber1;
+		/// <summary>
+		/// #2汽车机械采样机接口
+		/// </summary>
+		public SqlServerDapperDber CarJXSampler_Dber2;
+		/// <summary>
+		/// #3汽车机械采样机接口
+		/// </summary>
+		public SqlServerDapperDber CarJXSampler_Dber3;
+		/// <summary>
+		/// 轨道衡数据库链接
+		/// </summary>
+		public SqlServerDapperDber WeightBridger_Dber;
+	}
 }

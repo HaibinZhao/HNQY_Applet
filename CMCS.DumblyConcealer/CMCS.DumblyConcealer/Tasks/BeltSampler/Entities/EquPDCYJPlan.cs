@@ -10,7 +10,7 @@ namespace CMCS.DumblyConcealer.Tasks.BeltSampler.Entities
     /// <summary>
     /// 皮带采样机接口表 - 采样计划
     /// </summary>
-    [CMCS.DapperDber.Attrs.DapperBind("EquTbHCPDCYJPlan")]
+    [CMCS.DapperDber.Attrs.DapperBind("EquTbPDCYJPlan")]
     public class EquPDCYJPlan : EntityBase2
     {
         private string inFactoryBatchId;

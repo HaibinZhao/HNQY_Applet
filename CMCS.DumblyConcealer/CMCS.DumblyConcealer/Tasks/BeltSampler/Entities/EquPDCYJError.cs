@@ -10,7 +10,7 @@ namespace CMCS.DumblyConcealer.Tasks.BeltSampler.Entities
     /// <summary>
     /// 故障信息表
     /// </summary>
-    [CMCS.DapperDber.Attrs.DapperBind("EquTbHCPDCYJError")]
+    [CMCS.DapperDber.Attrs.DapperBind("EquTbPDCYJError")]
     public class EquPDCYJError : EntityBase2
     { 
         private string machineCode;
