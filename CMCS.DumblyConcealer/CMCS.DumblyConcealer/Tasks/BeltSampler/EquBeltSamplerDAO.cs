@@ -222,7 +222,7 @@ namespace CMCS.DumblyConcealer.Tasks.BeltSampler
 			int res = 0;
 
 			// 集中管控 > 第三方 
-			foreach (InfBeltSamplePlan entity in BeltSamplerDAO.GetInstance().GetWaitForSyncBeltSamplePlan(GlobalVars.InterfaceType_PDCYJ))
+			foreach (InfBeltSamplePlan entity in BeltSamplerDAO.GetInstance().GetWaitForSyncBeltSamplePlan(GlobalVars.InterfaceType_PDCYJ, this.MachineCode))
 			{
 				bool isSuccess = false;
 

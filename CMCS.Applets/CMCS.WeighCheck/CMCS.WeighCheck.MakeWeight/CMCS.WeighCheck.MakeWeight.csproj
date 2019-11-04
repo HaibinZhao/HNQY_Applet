@@ -200,7 +200,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\CMCS.Common\CMCS.Common\CMCS.Common.csproj">
       <Project>{8DB8A68D-079F-4825-A9F4-C6FF78D799EB}</Project>
-      <Name>CMCS.Common %28CMCS.Common\CMCS.Common%29</Name>
+      <Name>CMCS.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\CMCS.Common\CMCS.DapperDber\CMCS.DapperDber.csproj">
       <Project>{6384F3D5-7CB5-4D1F-8A1F-3FA9B0A78F05}</Project>
@@ -220,7 +220,7 @@
     </ProjectReference>
     <ProjectReference Include="..\CMCS.WeighCheck\CMCS.WeighCheck.csproj">
       <Project>{4EB74D5F-B5FA-4CDD-A908-1965DBE00614}</Project>
-      <Name>CMCS.WeighCheck %28CMCS.Applets\CMCS.WeighCheck\CMCS.WeighCheck%29</Name>
+      <Name>CMCS.WeighCheck</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

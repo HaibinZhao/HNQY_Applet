@@ -224,11 +224,11 @@
   <ItemGroup>
     <ProjectReference Include="..\..\CMCS.Common\CMCS.Common\CMCS.Common.csproj">
       <Project>{8DB8A68D-079F-4825-A9F4-C6FF78D799EB}</Project>
-      <Name>CMCS.Common %28CMCS.Common\CMCS.Common%29</Name>
+      <Name>CMCS.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\CMCS.CarTransport\CMCS.CarTransport.csproj">
       <Project>{5ED15A98-0895-48D3-851C-088A217D41E7}</Project>
-      <Name>CMCS.CarTransport %28CMCS.CarTransport\CMCS.CarTransport%29</Name>
+      <Name>CMCS.CarTransport</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

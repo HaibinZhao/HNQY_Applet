@@ -101,7 +101,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CMCS.ADGS\CMCS.ADGS.csproj">
       <Project>{C56E2092-4B56-4366-9F41-1F949A9F619B}</Project>
-      <Name>CMCS.ADGS %28CMCS.Applets\CMCS.ADGS\CMCS.ADGS%29</Name>
+      <Name>CMCS.ADGS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

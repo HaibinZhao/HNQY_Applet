@@ -55,7 +55,7 @@ namespace CMCS.DumblyConcealer.Win.DumblyTasks
                 carJXSamplerDAO1.SyncUnloadResult(this.rTxtOutputer.Output);
                 carJXSamplerDAO1.SyncQCJXCYJError(this.rTxtOutputer.Output);
                 carJXSamplerDAO1.SyncSignal(this.rTxtOutputer.Output);
-         
+				
             }, 2000, OutputError);
 
             this.taskSimpleScheduler.StartNewTask("#1汽车机械采样机-上位机心跳", () =>

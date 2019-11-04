@@ -75,7 +75,8 @@ namespace RW.LZR12
         /// <summary>
         /// 连接设备
         /// </summary>
-        /// <param name="com">端口号</param>
+		/// <param name="ipAddress">IP地址</param>
+		/// <param name="port">端口号</param>
         /// <param name="power">功率值，取值为0~30，对应0~30dBm.</param>
         /// <param name="freq_type">频率类型 取0时为国标（920M~925M），取1时为美标（902M~928M） </param>
         /// <returns></returns>

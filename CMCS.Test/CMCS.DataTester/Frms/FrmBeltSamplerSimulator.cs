@@ -17,12 +17,13 @@ using CMCS.Common.Enums;
 using CMCS.Common;
 using CMCS.Common.DAO;
 using CMCS.Common.Entities.BaseInfo;
+using CMCS.DapperDber.Dbs.OracleDb;
 
 namespace CMCS.DataTester.Frms
 {
     public partial class FrmBeltSamplerSimulator : Form
     {
-        SqlServerDapperDber dber = DcDbers.GetInstance().BeltSampler_Dber;
+        OracleDapperDber dber = DcDbers.GetInstance().BeltSampler_Dber1;
 
         bool isStartSimulator = false;
         /// <summary>

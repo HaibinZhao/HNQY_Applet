@@ -533,7 +533,7 @@ namespace CMCS.UnloadSampler.Frms
 			{
 				// 检测采样机系统的状态
 				string samplerSystemStatue = commonDAO.GetSignalDataValue(this.currentSampler.EquipmentCode, eSignalDataName.系统.ToString());
-				if (samplerSystemStatue != eEquInfSamplerSystemStatus.就绪待机.ToString() || samplerSystemStatue != eEquInfSamplerSystemStatus.就绪待机2.ToString())
+				if (samplerSystemStatue != eEquInfSamplerSystemStatus.就绪待机.ToString() && samplerSystemStatue != eEquInfSamplerSystemStatus.就绪待机2.ToString())
 				{
 					MessageBoxEx.Show("采样机系统未就绪，禁止卸样", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 					return;
