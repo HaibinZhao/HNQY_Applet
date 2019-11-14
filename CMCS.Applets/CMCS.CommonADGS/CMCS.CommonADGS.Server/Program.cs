@@ -19,7 +19,7 @@ namespace CMCS.CommonADGS.Server
         {
             // BasisPlatform:应用程序初始化
             Basiser basiser = Basiser.GetInstance();
-            basiser.Init(ServerConfiguration.Instance.AppIdentifier, PlatformType.Winform, IPAddress.Parse("127.0.0.1"), 0);
+            //basiser.Init(ServerConfiguration.Instance.AppIdentifier, PlatformType.Winform, IPAddress.Parse("127.0.0.1"), 0);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

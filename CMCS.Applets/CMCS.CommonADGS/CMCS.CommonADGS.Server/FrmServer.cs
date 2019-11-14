@@ -105,30 +105,30 @@ namespace CMCS.CommonADGS.Server
 					}
 
 					OracleDapperDber selfDber = new OracleDapperDber(ServerConfiguration.Instance.SelfConnStr);
-					using (OracleConnection connection = selfDber.CreateConnection() as OracleConnection)
+					//using (OracleConnection connection = selfDber.CreateConnection() as OracleConnection)
+					//{
+
+					if (data.DataColumns != null)
 					{
-
-						if (data.DataColumns != null)
-						{
-							// 在数据中创建表
-							if (connection.ExecuteScalar<int>(CMCS.CommonADGS.Core.OracleSqlBuilder.BuildHasTableSQL(item.DataTableName)) == 0)
-								connection.Execute(CMCS.CommonADGS.Core.OracleSqlBuilder.BuildTableSQL(item.DataTableName, data.DataColumns));
-						}
-						else if (data.DataRows != null)
-						{
-							string execSql = string.Empty;
-
-							// 生成主键值
-							string primaryKeyValue = item.UpLoadIdentifer + "-" + CMCS.CommonADGS.Core.OracleSqlBuilder.BuildPrimaryKeyValue(item.PrimarKeys, data.DataRows);
-
-							if (connection.ExecuteScalar<int>(CMCS.CommonADGS.Core.OracleSqlBuilder.BuildHasRecordSQL(item.DataTableName, primaryKeyValue)) == 0)
-								execSql = CMCS.CommonADGS.Core.OracleSqlBuilder.BuildInsertSQL(item.DataTableName, primaryKeyValue, item.UpLoadIdentifer, data.DataRows);
-							else
-								execSql = CMCS.CommonADGS.Core.OracleSqlBuilder.BuildUpdateSQL(item.DataTableName, primaryKeyValue, item.UpLoadIdentifer, data.DataRows);
-
-							syncCount += connection.Execute(execSql);
-						}
+						// 在数据中创建表
+						if (selfDber.Execute(CMCS.CommonADGS.Core.OracleSqlBuilder.BuildHasTableSQL(item.DataTableName)) == 0)
+							selfDber.Execute(CMCS.CommonADGS.Core.OracleSqlBuilder.BuildTableSQL(item.DataTableName, data.DataColumns));
 					}
+					else if (data.DataRows != null)
+					{
+						string execSql = string.Empty;
+
+						// 生成主键值
+						string primaryKeyValue = item.UpLoadIdentifer + "-" + CMCS.CommonADGS.Core.OracleSqlBuilder.BuildPrimaryKeyValue(item.PrimarKeys, data.DataRows);
+
+						if (selfDber.Execute(CMCS.CommonADGS.Core.OracleSqlBuilder.BuildHasRecordSQL(item.DataTableName, primaryKeyValue)) == 0)
+							execSql = CMCS.CommonADGS.Core.OracleSqlBuilder.BuildInsertSQL(item.DataTableName, primaryKeyValue, item.UpLoadIdentifer, data.DataRows);
+						else
+							execSql = CMCS.CommonADGS.Core.OracleSqlBuilder.BuildUpdateSQL(item.DataTableName, primaryKeyValue, item.UpLoadIdentifer, data.DataRows);
+
+						syncCount += selfDber.Execute(execSql);
+					}
+					//}
 				}
 			}
 			if (!IsMatch) grabPerformer_OutputInfo(string.Format("接收到:{0}数据,但未找到对应配置", data.UpLoadIdentifier));
