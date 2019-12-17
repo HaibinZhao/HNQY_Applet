@@ -1877,7 +1877,9 @@ namespace CMCS.CarTransport.Weighter.Frms
 				if (entity == null) return;
 				gridRow.Cells["clmSupplierName"].Value = "****";
 				gridRow.Cells["clmMineName"].Value = "****";
-			}
+                gridRow.Cells["clmTransportCompanyName"].Value = "****";
+                gridRow.Cells["clmFuelKindName"].Value = "****";
+            }
 		}
 
 

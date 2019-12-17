@@ -792,14 +792,14 @@ namespace CMCS.CarTransport.Weighter.Frms
             gridColumn25.Width = 150;
             gridColumn26.DataPropertyName = "TransportCompanyName";
             gridColumn26.HeaderText = "运输单位";
-            gridColumn26.Name = "";
+            gridColumn26.Name = "clmTransportCompanyName";
             gridColumn26.Width = 150;
             gridColumn27.DataPropertyName = "MineName";
             gridColumn27.HeaderText = "矿点";
             gridColumn27.Name = "clmMineName";
             gridColumn28.DataPropertyName = "FuelKindName";
             gridColumn28.HeaderText = "煤种";
-            gridColumn28.Name = "";
+            gridColumn28.Name = "clmFuelKindName";
             gridColumn29.DataPropertyName = "SamplingType";
             gridColumn29.HeaderText = "采样方式";
             gridColumn29.Name = "";
@@ -867,12 +867,12 @@ namespace CMCS.CarTransport.Weighter.Frms
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stripPrintCode});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(119, 26);
             // 
             // stripPrintCode
             // 
             this.stripPrintCode.Name = "stripPrintCode";
-            this.stripPrintCode.Size = new System.Drawing.Size(124, 22);
+            this.stripPrintCode.Size = new System.Drawing.Size(118, 22);
             this.stripPrintCode.Text = "打印编码";
             this.stripPrintCode.Click += new System.EventHandler(this.stripPrintCode_Click);
             // 
@@ -932,14 +932,14 @@ namespace CMCS.CarTransport.Weighter.Frms
             gridColumn7.Width = 150;
             gridColumn8.DataPropertyName = "TransportCompanyName";
             gridColumn8.HeaderText = "运输单位";
-            gridColumn8.Name = "";
+            gridColumn8.Name = "clmTransportCompanyName";
             gridColumn8.Width = 150;
             gridColumn9.DataPropertyName = "MineName";
             gridColumn9.HeaderText = "矿点";
             gridColumn9.Name = "clmMineName";
             gridColumn10.DataPropertyName = "FuelKindName";
             gridColumn10.HeaderText = "煤种";
-            gridColumn10.Name = "";
+            gridColumn10.Name = "clmFuelKindName";
             gridColumn11.DataPropertyName = "SamplingType";
             gridColumn11.HeaderText = "采样方式";
             gridColumn11.Name = "";
@@ -2254,7 +2254,6 @@ namespace CMCS.CarTransport.Weighter.Frms
             this.ClientSize = new System.Drawing.Size(1467, 695);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.buttonX2);
-            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmWeighter";

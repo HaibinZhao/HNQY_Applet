@@ -221,9 +221,11 @@ namespace CMCS.CarTransport.JxSampler.Frms
 					//txtMineName.Text = value.MineName;
 					txtMineName.Text = "****";
 					txtTicketWeight.Text = value.TicketWeight.ToString();
-					txtTransportCompanyName.Text = value.TransportCompanyName;
-					txtFuelKindName.Text = value.FuelKindName;
-					txtSamplingType.Text = value.SamplingType;
+                    //txtTransportCompanyName.Text = value.TransportCompanyName;
+                    txtTransportCompanyName.Text = "****";
+                    //txtFuelKindName.Text = value.FuelKindName;
+                    txtFuelKindName.Text = "****";
+                    txtSamplingType.Text = value.SamplingType;
 				}
 				else
 				{
@@ -1613,7 +1615,9 @@ namespace CMCS.CarTransport.JxSampler.Frms
 				if (entity == null) return;
 				gridRow.Cells["clmSupplierName"].Value = "****";
 				gridRow.Cells["clmMineName"].Value = "****";
-			}
+                gridRow.Cells["clmTransportCompanyName"].Value = "****";
+                gridRow.Cells["clmFuelKindName"].Value = "****";
+            }
 		}
 
 		/// <summary>

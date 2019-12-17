@@ -28,7 +28,22 @@ namespace CMCS.CarTransport.JxSampler.Frms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn18 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn19 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn20 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn21 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn22 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn23 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn24 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn25 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn26 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn27 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn28 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn29 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn30 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn31 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn32 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn33 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
@@ -46,22 +61,6 @@ namespace CMCS.CarTransport.JxSampler.Frms
             DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn15 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn16 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn17 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn18 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn19 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn20 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn21 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn22 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn23 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn24 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn25 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn26 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn27 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn28 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn29 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn30 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn31 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn32 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn33 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,12 +89,12 @@ namespace CMCS.CarTransport.JxSampler.Frms
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superGridControl2 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
-            this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superGridControl2 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.btnStartScan = new DevComponents.DotNetBar.ButtonX();
             this.txtTicketWeight = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -126,8 +125,8 @@ namespace CMCS.CarTransport.JxSampler.Frms
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
             this.panelEx4 = new DevComponents.DotNetBar.PanelEx();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer2 = new System.Windows.Forms.Timer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -145,8 +144,8 @@ namespace CMCS.CarTransport.JxSampler.Frms
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMeiChe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -620,6 +619,125 @@ namespace CMCS.CarTransport.JxSampler.Frms
             this.superTabItem2});
             this.superTabControl1.Text = "superTabControl1";
             // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.superGridControl1);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 34);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(988, 153);
+            this.superTabControlPanel1.TabIndex = 1;
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // superGridControl1
+            // 
+            this.superGridControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.superGridControl1.DefaultVisualStyles.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
+            this.superGridControl1.DefaultVisualStyles.CellStyles.Default.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.superGridControl1.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.superGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.superGridControl1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.superGridControl1.ForeColor = System.Drawing.Color.White;
+            this.superGridControl1.Location = new System.Drawing.Point(0, 0);
+            this.superGridControl1.Name = "superGridControl1";
+            this.superGridControl1.PrimaryGrid.AutoGenerateColumns = false;
+            gridColumn18.DataPropertyName = "SerialNumber";
+            gridColumn18.HeaderText = "流水号";
+            gridColumn18.Name = "";
+            gridColumn18.Width = 120;
+            gridColumn19.DataPropertyName = "Batch";
+            gridColumn19.HeaderText = "批次编号";
+            gridColumn19.Name = "";
+            gridColumn19.Width = 120;
+            gridColumn20.DataPropertyName = "CarNumber";
+            gridColumn20.HeaderText = "车牌号";
+            gridColumn20.Name = "";
+            gridColumn21.DataPropertyName = "InFactoryTime";
+            gridColumn21.HeaderText = "入厂时间";
+            gridColumn21.Name = "";
+            gridColumn21.Width = 150;
+            gridColumn22.DataPropertyName = "SupplierName";
+            gridColumn22.HeaderText = "供煤单位";
+            gridColumn22.Name = "clmSupplierName";
+            gridColumn22.Width = 150;
+            gridColumn23.DataPropertyName = "TransportCompanyName";
+            gridColumn23.HeaderText = "运输单位";
+            gridColumn23.Name = "clmTransportCompanyName";
+            gridColumn23.Width = 150;
+            gridColumn24.DataPropertyName = "MineName";
+            gridColumn24.HeaderText = "矿点";
+            gridColumn24.Name = "clmMineName";
+            gridColumn25.DataPropertyName = "FuelKindName";
+            gridColumn25.HeaderText = "煤种";
+            gridColumn25.Name = "clmFuelKindName";
+            gridColumn26.DataPropertyName = "SamplingType";
+            gridColumn26.HeaderText = "采样方式";
+            gridColumn26.Name = "";
+            gridColumn26.Width = 80;
+            gridColumn27.DataPropertyName = "TicketWeight";
+            gridColumn27.HeaderText = "矿发量";
+            gridColumn27.Name = "";
+            gridColumn27.Width = 80;
+            gridColumn28.DataPropertyName = "GrossWeight";
+            gridColumn28.HeaderText = "毛重";
+            gridColumn28.Name = "";
+            gridColumn28.Width = 80;
+            gridColumn29.DataPropertyName = "TareWeight";
+            gridColumn29.HeaderText = "皮重";
+            gridColumn29.Name = "";
+            gridColumn29.Width = 80;
+            gridColumn30.DataPropertyName = "DeductWeight";
+            gridColumn30.HeaderText = "扣吨";
+            gridColumn30.Name = "";
+            gridColumn30.Width = 80;
+            gridColumn31.DataPropertyName = "SuttleWeight";
+            gridColumn31.HeaderText = "净重";
+            gridColumn31.Name = "";
+            gridColumn31.Width = 80;
+            gridColumn32.DataPropertyName = "IsUse";
+            gridColumn32.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridCheckBoxXEditControl);
+            gridColumn32.HeaderText = "有效";
+            gridColumn32.Name = "";
+            gridColumn32.Width = 60;
+            gridColumn33.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.AllCells;
+            gridColumn33.DataPropertyName = "Remark";
+            gridColumn33.HeaderText = "备注";
+            gridColumn33.Name = "";
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn18);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn19);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn20);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn21);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn22);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn23);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn24);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn25);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn26);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn27);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn28);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn29);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn30);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn31);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn32);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn33);
+            this.superGridControl1.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.Row;
+            this.superGridControl1.PrimaryGrid.MultiSelect = false;
+            this.superGridControl1.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
+            this.superGridControl1.PrimaryGrid.ShowRowGridIndex = true;
+            this.superGridControl1.Size = new System.Drawing.Size(988, 153);
+            this.superGridControl1.TabIndex = 1;
+            this.superGridControl1.Text = "superGridControl1";
+            this.superGridControl1.DataBindingComplete += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridDataBindingCompleteEventArgs>(this.superGridControl_DataBindingComplete);
+            this.superGridControl1.BeginEdit += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridEditEventArgs>(this.superGridControl_BeginEdit);
+            this.superGridControl1.GetRowHeaderText += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridGetRowHeaderTextEventArgs>(this.superGridControl_GetRowHeaderText);
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Name = "superTabItem1";
+            this.superTabItem1.Text = "未 完 成";
+            // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.Controls.Add(this.superGridControl2);
@@ -663,14 +781,14 @@ namespace CMCS.CarTransport.JxSampler.Frms
             gridColumn5.Width = 150;
             gridColumn6.DataPropertyName = "TransportCompanyName";
             gridColumn6.HeaderText = "运输单位";
-            gridColumn6.Name = "";
+            gridColumn6.Name = "clmTransportCompanyName";
             gridColumn6.Width = 150;
             gridColumn7.DataPropertyName = "MineName";
             gridColumn7.HeaderText = "矿点";
             gridColumn7.Name = "clmMineName";
             gridColumn8.DataPropertyName = "FuelKindName";
             gridColumn8.HeaderText = "煤种";
-            gridColumn8.Name = "";
+            gridColumn8.Name = "clmFuelKindName";
             gridColumn9.DataPropertyName = "SamplingType";
             gridColumn9.HeaderText = "采样方式";
             gridColumn9.Name = "";
@@ -742,125 +860,6 @@ namespace CMCS.CarTransport.JxSampler.Frms
             this.superTabItem2.GlobalItem = false;
             this.superTabItem2.Name = "superTabItem2";
             this.superTabItem2.Text = "今 日 已 完 成";
-            // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.superGridControl1);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 34);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(988, 153);
-            this.superTabControlPanel1.TabIndex = 1;
-            this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // superGridControl1
-            // 
-            this.superGridControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
-            this.superGridControl1.DefaultVisualStyles.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
-            this.superGridControl1.DefaultVisualStyles.CellStyles.Default.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.superGridControl1.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.superGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.superGridControl1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.superGridControl1.ForeColor = System.Drawing.Color.White;
-            this.superGridControl1.Location = new System.Drawing.Point(0, 0);
-            this.superGridControl1.Name = "superGridControl1";
-            this.superGridControl1.PrimaryGrid.AutoGenerateColumns = false;
-            gridColumn18.DataPropertyName = "SerialNumber";
-            gridColumn18.HeaderText = "流水号";
-            gridColumn18.Name = "";
-            gridColumn18.Width = 120;
-            gridColumn19.DataPropertyName = "Batch";
-            gridColumn19.HeaderText = "批次编号";
-            gridColumn19.Name = "";
-            gridColumn19.Width = 120;
-            gridColumn20.DataPropertyName = "CarNumber";
-            gridColumn20.HeaderText = "车牌号";
-            gridColumn20.Name = "";
-            gridColumn21.DataPropertyName = "InFactoryTime";
-            gridColumn21.HeaderText = "入厂时间";
-            gridColumn21.Name = "";
-            gridColumn21.Width = 150;
-            gridColumn22.DataPropertyName = "SupplierName";
-            gridColumn22.HeaderText = "供煤单位";
-            gridColumn22.Name = "clmSupplierName";
-            gridColumn22.Width = 150;
-            gridColumn23.DataPropertyName = "TransportCompanyName";
-            gridColumn23.HeaderText = "运输单位";
-            gridColumn23.Name = "";
-            gridColumn23.Width = 150;
-            gridColumn24.DataPropertyName = "MineName";
-            gridColumn24.HeaderText = "矿点";
-            gridColumn24.Name = "clmMineName";
-            gridColumn25.DataPropertyName = "FuelKindName";
-            gridColumn25.HeaderText = "煤种";
-            gridColumn25.Name = "";
-            gridColumn26.DataPropertyName = "SamplingType";
-            gridColumn26.HeaderText = "采样方式";
-            gridColumn26.Name = "";
-            gridColumn26.Width = 80;
-            gridColumn27.DataPropertyName = "TicketWeight";
-            gridColumn27.HeaderText = "矿发量";
-            gridColumn27.Name = "";
-            gridColumn27.Width = 80;
-            gridColumn28.DataPropertyName = "GrossWeight";
-            gridColumn28.HeaderText = "毛重";
-            gridColumn28.Name = "";
-            gridColumn28.Width = 80;
-            gridColumn29.DataPropertyName = "TareWeight";
-            gridColumn29.HeaderText = "皮重";
-            gridColumn29.Name = "";
-            gridColumn29.Width = 80;
-            gridColumn30.DataPropertyName = "DeductWeight";
-            gridColumn30.HeaderText = "扣吨";
-            gridColumn30.Name = "";
-            gridColumn30.Width = 80;
-            gridColumn31.DataPropertyName = "SuttleWeight";
-            gridColumn31.HeaderText = "净重";
-            gridColumn31.Name = "";
-            gridColumn31.Width = 80;
-            gridColumn32.DataPropertyName = "IsUse";
-            gridColumn32.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridCheckBoxXEditControl);
-            gridColumn32.HeaderText = "有效";
-            gridColumn32.Name = "";
-            gridColumn32.Width = 60;
-            gridColumn33.AutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.AllCells;
-            gridColumn33.DataPropertyName = "Remark";
-            gridColumn33.HeaderText = "备注";
-            gridColumn33.Name = "";
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn18);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn19);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn20);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn21);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn22);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn23);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn24);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn25);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn26);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn27);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn28);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn29);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn30);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn31);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn32);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn33);
-            this.superGridControl1.PrimaryGrid.InitialSelection = DevComponents.DotNetBar.SuperGrid.RelativeSelection.Row;
-            this.superGridControl1.PrimaryGrid.MultiSelect = false;
-            this.superGridControl1.PrimaryGrid.SelectionGranularity = DevComponents.DotNetBar.SuperGrid.SelectionGranularity.Row;
-            this.superGridControl1.PrimaryGrid.ShowRowGridIndex = true;
-            this.superGridControl1.Size = new System.Drawing.Size(988, 153);
-            this.superGridControl1.TabIndex = 1;
-            this.superGridControl1.Text = "superGridControl1";
-            this.superGridControl1.DataBindingComplete += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridDataBindingCompleteEventArgs>(this.superGridControl_DataBindingComplete);
-            this.superGridControl1.BeginEdit += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridEditEventArgs>(this.superGridControl_BeginEdit);
-            this.superGridControl1.GetRowHeaderText += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridGetRowHeaderTextEventArgs>(this.superGridControl_GetRowHeaderText);
-            // 
-            // superTabItem1
-            // 
-            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Name = "superTabItem1";
-            this.superTabItem1.Text = "未 完 成";
             // 
             // panelEx1
             // 
@@ -1358,7 +1357,6 @@ namespace CMCS.CarTransport.JxSampler.Frms
             this.ClientSize = new System.Drawing.Size(1420, 695);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.buttonX2);
-            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmJxSampler";
@@ -1385,8 +1383,8 @@ namespace CMCS.CarTransport.JxSampler.Frms
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel2.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
+            this.superTabControlPanel2.ResumeLayout(false);
             this.panelEx1.ResumeLayout(false);
             this.panelEx1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMeiChe)).EndInit();

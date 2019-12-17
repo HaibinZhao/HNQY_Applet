@@ -311,7 +311,7 @@ namespace CMCS.WeighCheck.MakeCheck.Frms.SampleWeigth
                     this.currentMakeDetail = czyHandlerDAO.GetRCMakeDetail(txtInputMakeCode.Text.Trim(), out resMessage);
                     if (this.currentMakeDetail != null)
                     {
-                        ShowMessage("扫码成功，样品类型：" + this.currentMakeDetail.SampleType + "  样罐编码：" + this.currentMakeDetail.BarrelCode, eOutputType.Normal);
+                        ShowMessage("扫码成功，样品类型：" + this.currentMakeDetail.SampleType + "  样罐编码：" + this.currentMakeDetail.BarrelCode + "   样重(g)："+ this.currentMakeDetail.Weight, eOutputType.Normal);
 
                         this.RCAssay = czyHandlerDAO.GetRCAssayByMakeCode(this.currentMakeDetail.Id);
                         if (this.RCAssay != null)
@@ -444,6 +444,5 @@ namespace CMCS.WeighCheck.MakeCheck.Frms.SampleWeigth
             this.Invoke(action);
         }
         #endregion
-
     }
 }

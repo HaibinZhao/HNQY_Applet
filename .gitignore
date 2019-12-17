@@ -529,3 +529,7 @@
 /CMCS.Applets/CMCS.CommonADGS/CMCS.CommonADGS.Win/bin/CMCS.CommonADGS.dll
 /CMCS.Applets/CMCS.CommonADGS/CMCS.CommonADGS.Win/obj/x86
 *.log
+/CMCS.Applets/CMCS.EPCEmpower/bin/RW.LZR12_Com.pdb
+/CMCS.Applets/CMCS.EPCEmpower/bin/RW.LZR12_Com.dll
+/CMCS.CarTransport/CMCS.CarTransport.JxSampler/bin/*.log
+/CMCS.CarTransport/CMCS.CarTransport.Queue/bin/*.log

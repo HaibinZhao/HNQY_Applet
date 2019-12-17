@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMakeCheck));
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.toolTip1 = new System.Windows.Forms.ToolTip();
-            this.slightWber = new CMCS.Forms.UserControls.UCtrlSignalLight();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlExMain = new DevComponents.DotNetBar.PanelEx();
-            this.lblWber = new System.Windows.Forms.Label();
             this.txtInputMakeCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.rtxtMakeCheckInfo = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.lblCurrentFlowFlag = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.lblWber = new System.Windows.Forms.Label();
+            this.slightWber = new CMCS.Forms.UserControls.UCtrlSignalLight();
             this.pnlExMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,17 +47,6 @@
             // 
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // slightWber
-            // 
-            this.slightWber.BackColor = System.Drawing.Color.Transparent;
-            this.slightWber.ForeColor = System.Drawing.Color.White;
-            this.slightWber.LightColor = System.Drawing.Color.Gray;
-            this.slightWber.Location = new System.Drawing.Point(660, 10);
-            this.slightWber.Name = "slightWber";
-            this.slightWber.Size = new System.Drawing.Size(20, 20);
-            this.slightWber.TabIndex = 223;
-            this.toolTip1.SetToolTip(this.slightWber, "<绿色> 已连接\r\n<红色> 未连接");
             // 
             // pnlExMain
             // 
@@ -79,17 +69,6 @@
             this.pnlExMain.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.pnlExMain.Style.GradientAngle = 90;
             this.pnlExMain.TabIndex = 0;
-            // 
-            // lblWber
-            // 
-            this.lblWber.AutoSize = true;
-            this.lblWber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWber.ForeColor = System.Drawing.Color.White;
-            this.lblWber.Location = new System.Drawing.Point(685, 9);
-            this.lblWber.Name = "lblWber";
-            this.lblWber.Size = new System.Drawing.Size(54, 20);
-            this.lblWber.TabIndex = 224;
-            this.lblWber.Text = "电子秤";
             // 
             // txtInputMakeCode
             // 
@@ -155,6 +134,28 @@
             this.label14.TabIndex = 208;
             this.label14.Text = "当前流程：";
             // 
+            // lblWber
+            // 
+            this.lblWber.AutoSize = true;
+            this.lblWber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWber.ForeColor = System.Drawing.Color.White;
+            this.lblWber.Location = new System.Drawing.Point(685, 9);
+            this.lblWber.Name = "lblWber";
+            this.lblWber.Size = new System.Drawing.Size(54, 20);
+            this.lblWber.TabIndex = 224;
+            this.lblWber.Text = "电子秤";
+            // 
+            // slightWber
+            // 
+            this.slightWber.BackColor = System.Drawing.Color.Transparent;
+            this.slightWber.ForeColor = System.Drawing.Color.White;
+            this.slightWber.LightColor = System.Drawing.Color.Gray;
+            this.slightWber.Location = new System.Drawing.Point(660, 12);
+            this.slightWber.Name = "slightWber";
+            this.slightWber.Size = new System.Drawing.Size(20, 24);
+            this.slightWber.TabIndex = 223;
+            this.toolTip1.SetToolTip(this.slightWber, "<绿色> 已连接\r\n<红色> 未连接");
+            // 
             // FrmMakeCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +163,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(752, 423);
             this.Controls.Add(this.pnlExMain);
-            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

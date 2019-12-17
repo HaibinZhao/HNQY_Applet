@@ -1361,6 +1361,9 @@ namespace CMCS.CarTransport.Queue.Frms
                 {
                     string rulst = DecryptNew(txt_QRCode.Text);
                     this.LMYB = commonDAO.SelfDber.Entity<CmcsLMYB>("where YbNum=:YbNum order by InFactoryTime desc", new { YbNum = rulst });
+                    if (rulst.Split('-')[1] != DateTime.Now.ToString("yyyyMMdd"))
+                        MessageBoxEx.Show("该车辆的预报日期不是今天!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBoxEx.Show("亏吨异常", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     if (this.LMYB != null)
                     {
                         this.SelectedSupplier_BuyFuel = commonDAO.SelfDber.Get<CmcsSupplier>(this.LMYB.SupplierId);
@@ -1449,6 +1452,12 @@ namespace CMCS.CarTransport.Queue.Frms
                 return false;
             }
 
+            if (isRulst(this.CurrentAutotruck))
+            {
+                MessageBoxEx.Show("该车辆排放不符合国标", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             try
             {
                 // 生成入厂煤排队记录，同时生成批次信息以及采制化三级编码
@@ -1477,6 +1486,27 @@ namespace CMCS.CarTransport.Queue.Frms
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// 根据车辆判断该车辆排放是否符合标准(国V以上符合)
+        /// </summary>
+        /// <param name="autotruck"></param>
+        /// <returns></returns>
+        private bool isRulst(CmcsAutotruck autotruck)
+        {
+            bool rulst = false;
+            string state = commonDAO.GetAppletConfigString("车辆排放标准验证");
+            string strList = commonDAO.GetAppletConfigString("不合格车辆排放标准");
+            if (state == "1")
+            {
+                if(strList.Contains(autotruck.EmissionStandard))
+                {
+                    return true;
+                }
+
+            }
+            return rulst;
         }
 
         /// <summary>
