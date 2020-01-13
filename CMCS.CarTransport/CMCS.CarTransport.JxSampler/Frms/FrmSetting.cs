@@ -59,8 +59,8 @@ namespace CMCS.CarTransport.JxSampler.Frms
             try
             {
                 OracleDapperDber dber = new OracleDapperDber(txtSelfConnStr.Text.Trim());
-                dber.Connection.Open();
-                dber.Connection.Close();
+                dber.CreateConnection().Open();
+                dber.CreateConnection().Close();
 
                 return true;
             }

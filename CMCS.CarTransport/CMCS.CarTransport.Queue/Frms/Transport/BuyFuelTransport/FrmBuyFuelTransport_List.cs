@@ -20,6 +20,7 @@ using CMCS.Common.DAO;
 using CMCS.Common.Enums;
 using CMCS.CarTransport.Queue.Core;
 using CMCS.CarTransport.DAO;
+using CMCS.Common.Utilities;
 
 namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
 {
@@ -117,7 +118,11 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             string tempSqlWhere = this.SqlWhere;
             //List<CmcsBuyFuelTransport> list = Dbers.GetInstance().SelfDber.ExecutePager<CmcsBuyFuelTransport>(PageSize, CurrentIndex, tempSqlWhere + " order by SerialNumber desc");
 
-            List<CmcsBuyFuelTransport> list = Dbers.GetInstance().SelfDber.Entities<CmcsBuyFuelTransport>(tempSqlWhere + " order by SerialNumber desc");
+            string sql = "select t.* from cmcstbbuyfueltransport t left join  fultbinfactorybatch a on t.infactorybatchid=a.id ";
+
+            DataTable tb = Dbers.GetInstance().SelfDber.ExecuteDataTable(sql+ tempSqlWhere+ " order by t.SerialNumber desc");
+            IList<CmcsBuyFuelTransport> list = ConvertHelper<CmcsBuyFuelTransport>.ConvertToList(tb);
+            //List<CmcsBuyFuelTransport> list = Dbers.GetInstance().SelfDber.Entities<CmcsBuyFuelTransport>(tempSqlWhere + " order by SerialNumber desc");
             CmcsBuyFuelTransport total = new CmcsBuyFuelTransport();
             total.SerialNumber = "ºÏ¼Æ";
             total.GrossWeight = list.Sum(a => a.GrossWeight);
@@ -127,7 +132,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             total.TicketWeight = list.Sum(a => a.TicketWeight);
             list.Add(total);
             superGridControl1.PrimaryGrid.DataSource = list;
-
+            
             //GetTotalCount(tempSqlWhere);
             //PagerControlStatue();
 
@@ -138,13 +143,13 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
         {
             this.SqlWhere = " where 1=1";
 
-            if (!string.IsNullOrEmpty(txtSupplierName_BuyFuel.Text)) this.SqlWhere += " and SupplierName like '%" + txtSupplierName_BuyFuel.Text + "%'";
-            if (!string.IsNullOrEmpty(txtMineName_BuyFuel.Text)) this.SqlWhere += " and MineName like '%" + txtMineName_BuyFuel.Text + "%'";
-            if (!string.IsNullOrEmpty(cmbFuelName_BuyFuel.Text)) this.SqlWhere += " and FuelKindName like '%" + cmbFuelName_BuyFuel.Text + "%'";
-            if (dtpStartTime.Value.Year > 2000) this.SqlWhere += " and InFactoryTime >= '" + dtpStartTime.Value.Date + "'";
-            if (dtpEndTime.Value.Year > 2000) this.SqlWhere += " and InFactoryTime < '" + dtpEndTime.Value.AddDays(1).Date + "'";
-            if (!string.IsNullOrEmpty(txtCarNumber_Ser.Text)) this.SqlWhere += " and CarNumber like '%" + txtCarNumber_Ser.Text + "%'";
-
+            if (!string.IsNullOrEmpty(txtSupplierName_BuyFuel.Text)) this.SqlWhere += " and t.SupplierName like '%" + txtSupplierName_BuyFuel.Text + "%'";
+            if (!string.IsNullOrEmpty(txtMineName_BuyFuel.Text)) this.SqlWhere += " and t.MineName like '%" + txtMineName_BuyFuel.Text + "%'";
+            if (!string.IsNullOrEmpty(cmbFuelName_BuyFuel.Text)) this.SqlWhere += " and t.FuelKindName like '%" + cmbFuelName_BuyFuel.Text + "%'";
+            if (dtpStartTime.Value.Year > 2000) this.SqlWhere += " and t.InFactoryTime >= '" + dtpStartTime.Value.Date + "'";
+            if (dtpEndTime.Value.Year > 2000) this.SqlWhere += " and t.InFactoryTime < '" + dtpEndTime.Value.AddDays(1).Date + "'";
+            if (!string.IsNullOrEmpty(txtCarNumber_Ser.Text)) this.SqlWhere += " and t.CarNumber like '%" + txtCarNumber_Ser.Text + "%'";
+            if (!string.IsNullOrEmpty(txt_BatchNo.Text)) this.SqlWhere += " and a.batch like '%" + txt_BatchNo.Text + "%'";
             CurrentIndex = 0;
             BindData();
         }

@@ -10,6 +10,7 @@ using CMCS.Common.DAO;
 using CMCS.Common.Enums;
 using CMCS.Common.Entities.TrainInFactory;
 using CMCS.Common.Entities.Fuel;
+using System.Data;
 
 namespace CMCS.DumblyConcealer.Tasks.WeightBridger
 {
@@ -30,7 +31,85 @@ namespace CMCS.DumblyConcealer.Tasks.WeightBridger
         {
 
         }
+        public int SyncLwCarsInfo2(Action<string, eOutputType> output)
+        {
+            int res = 0;
+            DateTime tm = DateTime.Now.AddDays(-CommonDAO.GetInstance().GetAppletConfigInt32("轨道衡数据读取天数")).Date;
+            string sql = "select 总序号,车号,车型,[重量(kg)],[速度(km/h)],计量时间,列文件名 from TR_1 Where 计量时间>='" + tm + "' and [重量(kg)]>10 order by 计量时间 asc";
+            DataTable tb = DcDbers.GetInstance().WeightBridger_Dber.ExecuteDataTable(sql);
 
+            for (int i = 0; i < tb.Rows.Count; i++)
+            {
+                string pKId = tb.Rows[i]["车号"] + "-" + tb.Rows[i]["车型"];
+                string str = tb.Rows[i]["列文件名"].ToString().Substring(tb.Rows[i]["列文件名"].ToString().Length - 1, 1);
+                FulTrainWeightRecord trainWeightRecord = Dbers.GetInstance().SelfDber.Entity<FulTrainWeightRecord>("where PKID=:PKID and CreateDate>=:CreateDate", new { PKID = pKId, CreateDate = DateTime.Now.AddDays(-3) });
+                if (trainWeightRecord == null)
+                {
+                    if (str.ToUpper() == "L")
+                    {
+                        res += Dbers.GetInstance().SelfDber.Insert<FulTrainWeightRecord>(
+                          new FulTrainWeightRecord
+                          {
+
+
+
+                              PKID = pKId,
+                              ApparatusNumber = GlobalVars.MachineCode_GDH_1,
+                              CarNumber = tb.Rows[i]["车号"].ToString(),
+                              CarModel = tb.Rows[i]["车型"].ToString(),
+                              //TicketWeight = Decimal.Parse(tb.Rows[i]["重量(kg)"].ToString()),
+                              GrossWeight = Decimal.Parse(tb.Rows[i]["重量(kg)"].ToString()),
+                              TareWeight = 20000,
+                              // StandardWeight = entity.JingZhong,
+                              Speed = Decimal.Parse(tb.Rows[i]["速度(km/h)"].ToString()),
+
+                              GrossDate = Convert.ToDateTime(tb.Rows[i]["计量时间"]),
+                              // SkinTime = Convert.ToDateTime(entity.TrainsDate.ToShortDateString() + " " + entity.TrainsTime),
+                              //LeaveTime = Convert.ToDateTime(entity.TrainsDate.ToShortDateString() + " " + entity.TrainsTime),
+
+                          }
+                              );
+                    }
+                }
+                else
+                {
+                    if (str.ToUpper() == "R")
+                    {
+                        trainWeightRecord.TareWeight = Decimal.Parse(tb.Rows[i]["重量(kg)"].ToString());
+                        trainWeightRecord.SuttleWeight = trainWeightRecord.GrossWeight - trainWeightRecord.TareWeight;
+                        trainWeightRecord.TareDate = Convert.ToDateTime(tb.Rows[i]["计量时间"]);
+                        res += Dbers.GetInstance().SelfDber.Update(trainWeightRecord);
+                    }
+                    else
+                    {
+                        res += Dbers.GetInstance().SelfDber.Update<FulTrainWeightRecord>(
+                     new FulTrainWeightRecord
+                     {
+
+
+                         PKID = pKId,
+                         ApparatusNumber = GlobalVars.MachineCode_GDH_1,
+                         CarNumber = tb.Rows[i]["车号"].ToString(),
+                         CarModel = tb.Rows[i]["车型"].ToString(),
+                         //TicketWeight = Decimal.Parse(tb.Rows[i]["重量(kg)"].ToString()),
+                         GrossWeight = Decimal.Parse(tb.Rows[i]["重量(kg)"].ToString()),
+                         TareWeight = 20000,
+                         // StandardWeight = entity.JingZhong,
+                         Speed = Decimal.Parse(tb.Rows[i]["速度(km/h)"].ToString()),
+
+                         GrossDate = Convert.ToDateTime(tb.Rows[i]["计量时间"])
+                     }
+                         );
+
+                    }
+
+                }
+
+
+            }
+            output(string.Format("同步轨道衡数据 {0} 条（集中管控 > 第三方）", res), eOutputType.Normal);
+            return res;
+        }
         /// <summary>
         /// 同步轨道衡过衡数据，并在火车出厂后将皮重回写
         /// </summary>

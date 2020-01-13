@@ -47,7 +47,7 @@ namespace CMCS.DumblyConcealer.Win.DumblyTasks
             EquWeightBridgerDAO weightBridger_DAO = EquWeightBridgerDAO.GetInstance();
             taskSimpleScheduler.StartNewTask("同步轨道衡过衡数据", () =>
             {
-                weightBridger_DAO.SyncLwCarsInfo(this.rTxtOutputer.Output);
+                weightBridger_DAO.SyncLwCarsInfo2(this.rTxtOutputer.Output);
 
             }, 30000, OutputError);
         }

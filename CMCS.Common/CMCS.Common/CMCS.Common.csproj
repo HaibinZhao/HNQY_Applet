@@ -156,6 +156,7 @@
     <Compile Include="Entities\TrainInFactory\CmcsTrainSampleScheme.cs" />
     <Compile Include="Entities\TrainInFactory\CmcsTrainWatch.cs" />
     <Compile Include="Entities\TrainInFactory\CmcsTrainWeightRecord.cs" />
+    <Compile Include="Entities\TrainInFactory\FulTrainWeightRecord.cs" />
     <Compile Include="Enums\AutoCupboard\eCZPLX.cs" />
     <Compile Include="Enums\AutoCupboard\eEquInfCYGCmdResultCode.cs" />
     <Compile Include="Enums\AutoCupboard\eEquInfSystemStatus.cs" />

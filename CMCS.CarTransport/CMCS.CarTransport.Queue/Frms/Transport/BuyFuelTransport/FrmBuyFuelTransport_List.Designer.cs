@@ -73,6 +73,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.btnSelectMine_BuyFuel = new DevComponents.DotNetBar.ButtonX();
             this.txtMineName_BuyFuel = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtCarNumber_Ser = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_BatchNo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel2.SuspendLayout();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -90,13 +91,13 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // 
             // superGridControl1
             // 
-            this.superGridControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.superGridControl1.BackColor = System.Drawing.Color.White;
             this.superGridControl1.DefaultVisualStyles.CellStyles.Default.Alignment = DevComponents.DotNetBar.SuperGrid.Style.Alignment.MiddleCenter;
             this.superGridControl1.DefaultVisualStyles.CellStyles.Default.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.superGridControl1.DefaultVisualStyles.ColumnHeaderStyles.Default.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.superGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.superGridControl1.ForeColor = System.Drawing.Color.White;
+            this.superGridControl1.ForeColor = System.Drawing.Color.Black;
             this.superGridControl1.Location = new System.Drawing.Point(0, 0);
             this.superGridControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.superGridControl1.Name = "superGridControl1";
@@ -359,10 +360,10 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.panel2.Controls.Add(this.panelEx1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
@@ -399,21 +400,21 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // 
             this.lblPagerInfo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblPagerInfo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lblPagerInfo.ForeColor = System.Drawing.Color.White;
+            this.lblPagerInfo.ForeColor = System.Drawing.Color.Black;
             this.lblPagerInfo.Location = new System.Drawing.Point(3, 6);
             this.lblPagerInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblPagerInfo.Name = "lblPagerInfo";
             this.lblPagerInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPagerInfo.Size = new System.Drawing.Size(328, 24);
+            this.lblPagerInfo.Size = new System.Drawing.Size(338, 24);
             this.lblPagerInfo.TabIndex = 99;
             this.lblPagerInfo.Text = "共 0 条记录，每页20 条，共 0 页，当前第 0 页";
             // 
             // superGridControl2
             // 
-            this.superGridControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.superGridControl2.BackColor = System.Drawing.Color.White;
             this.superGridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superGridControl2.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
-            this.superGridControl2.ForeColor = System.Drawing.Color.White;
+            this.superGridControl2.ForeColor = System.Drawing.Color.Black;
             this.superGridControl2.Location = new System.Drawing.Point(0, 0);
             this.superGridControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.superGridControl2.Name = "superGridControl2";
@@ -424,10 +425,10 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // 
             // splitContainer2
             // 
-            this.splitContainer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.splitContainer2.BackColor = System.Drawing.Color.White;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer2.ForeColor = System.Drawing.Color.White;
+            this.splitContainer2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer2.IsSplitterFixed = true;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -439,13 +440,13 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel1.Controls.Add(this.superGridControl1);
             this.splitContainer2.Panel1.Controls.Add(this.superGridControl2);
-            this.splitContainer2.Panel1.ForeColor = System.Drawing.Color.White;
+            this.splitContainer2.Panel1.ForeColor = System.Drawing.Color.Black;
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
-            this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.White;
+            this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer2.Panel2MinSize = 40;
             this.splitContainer2.Size = new System.Drawing.Size(1419, 652);
             this.splitContainer2.SplitterDistance = 611;
@@ -457,7 +458,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.ForeColor = System.Drawing.Color.White;
+            this.splitContainer1.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Location = new System.Drawing.Point(0, 1);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
@@ -467,14 +468,14 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.splitContainer1.Panel1.ForeColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.Size = new System.Drawing.Size(1419, 693);
             this.splitContainer1.SplitterDistance = 40;
@@ -483,7 +484,8 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.panel1.Controls.Add(this.txt_BatchNo);
             this.panel1.Controls.Add(this.btnSelectSupplier_BuyFuel);
             this.panel1.Controls.Add(this.txtSupplierName_BuyFuel);
             this.panel1.Controls.Add(this.cmbFuelName_BuyFuel);
@@ -494,7 +496,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.panel1.Controls.Add(this.txtCarNumber_Ser);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -506,7 +508,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.btnSelectSupplier_BuyFuel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSelectSupplier_BuyFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSelectSupplier_BuyFuel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btnSelectSupplier_BuyFuel.Location = new System.Drawing.Point(800, 8);
+            this.btnSelectSupplier_BuyFuel.Location = new System.Drawing.Point(752, 7);
             this.btnSelectSupplier_BuyFuel.Name = "btnSelectSupplier_BuyFuel";
             this.btnSelectSupplier_BuyFuel.Size = new System.Drawing.Size(25, 25);
             this.btnSelectSupplier_BuyFuel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -517,17 +519,17 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // txtSupplierName_BuyFuel
             // 
             this.txtSupplierName_BuyFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSupplierName_BuyFuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.txtSupplierName_BuyFuel.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.txtSupplierName_BuyFuel.Border.Class = "TextBoxBorder";
             this.txtSupplierName_BuyFuel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtSupplierName_BuyFuel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtSupplierName_BuyFuel.ForeColor = System.Drawing.Color.White;
-            this.txtSupplierName_BuyFuel.Location = new System.Drawing.Point(587, 6);
+            this.txtSupplierName_BuyFuel.ForeColor = System.Drawing.Color.Black;
+            this.txtSupplierName_BuyFuel.Location = new System.Drawing.Point(589, 5);
             this.txtSupplierName_BuyFuel.Name = "txtSupplierName_BuyFuel";
-            this.txtSupplierName_BuyFuel.Size = new System.Drawing.Size(240, 29);
+            this.txtSupplierName_BuyFuel.Size = new System.Drawing.Size(190, 29);
             this.txtSupplierName_BuyFuel.TabIndex = 289;
             this.txtSupplierName_BuyFuel.TabStop = false;
             this.txtSupplierName_BuyFuel.WatermarkText = "请选择供应商...";
@@ -539,10 +541,10 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.cmbFuelName_BuyFuel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbFuelName_BuyFuel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFuelName_BuyFuel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmbFuelName_BuyFuel.ForeColor = System.Drawing.Color.White;
+            this.cmbFuelName_BuyFuel.ForeColor = System.Drawing.Color.Black;
             this.cmbFuelName_BuyFuel.FormattingEnabled = true;
             this.cmbFuelName_BuyFuel.ItemHeight = 23;
-            this.cmbFuelName_BuyFuel.Location = new System.Drawing.Point(1079, 6);
+            this.cmbFuelName_BuyFuel.Location = new System.Drawing.Point(938, 5);
             this.cmbFuelName_BuyFuel.Name = "cmbFuelName_BuyFuel";
             this.cmbFuelName_BuyFuel.Size = new System.Drawing.Size(93, 29);
             this.cmbFuelName_BuyFuel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -552,7 +554,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // dtpEndTime
             // 
             this.dtpEndTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpEndTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.dtpEndTime.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -561,7 +563,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.dtpEndTime.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtpEndTime.ButtonDropDown.Visible = true;
             this.dtpEndTime.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtpEndTime.ForeColor = System.Drawing.Color.White;
+            this.dtpEndTime.ForeColor = System.Drawing.Color.Black;
             this.dtpEndTime.IsPopupCalendarOpen = false;
             this.dtpEndTime.Location = new System.Drawing.Point(439, 6);
             this.dtpEndTime.LockUpdateChecked = false;
@@ -606,7 +608,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // dtpStartTime
             // 
             this.dtpStartTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpStartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.dtpStartTime.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -615,7 +617,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.dtpStartTime.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtpStartTime.ButtonDropDown.Visible = true;
             this.dtpStartTime.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtpStartTime.ForeColor = System.Drawing.Color.White;
+            this.dtpStartTime.ForeColor = System.Drawing.Color.Black;
             this.dtpStartTime.IsPopupCalendarOpen = false;
             this.dtpStartTime.Location = new System.Drawing.Point(282, 6);
             this.dtpStartTime.LockUpdateChecked = false;
@@ -662,7 +664,7 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             this.btnSelectMine_BuyFuel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSelectMine_BuyFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSelectMine_BuyFuel.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btnSelectMine_BuyFuel.Location = new System.Drawing.Point(1046, 8);
+            this.btnSelectMine_BuyFuel.Location = new System.Drawing.Point(905, 7);
             this.btnSelectMine_BuyFuel.Name = "btnSelectMine_BuyFuel";
             this.btnSelectMine_BuyFuel.Size = new System.Drawing.Size(25, 25);
             this.btnSelectMine_BuyFuel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -673,17 +675,17 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // txtMineName_BuyFuel
             // 
             this.txtMineName_BuyFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMineName_BuyFuel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.txtMineName_BuyFuel.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.txtMineName_BuyFuel.Border.Class = "TextBoxBorder";
             this.txtMineName_BuyFuel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMineName_BuyFuel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtMineName_BuyFuel.ForeColor = System.Drawing.Color.White;
-            this.txtMineName_BuyFuel.Location = new System.Drawing.Point(833, 6);
+            this.txtMineName_BuyFuel.ForeColor = System.Drawing.Color.Black;
+            this.txtMineName_BuyFuel.Location = new System.Drawing.Point(785, 5);
             this.txtMineName_BuyFuel.Name = "txtMineName_BuyFuel";
-            this.txtMineName_BuyFuel.Size = new System.Drawing.Size(240, 29);
+            this.txtMineName_BuyFuel.Size = new System.Drawing.Size(147, 29);
             this.txtMineName_BuyFuel.TabIndex = 284;
             this.txtMineName_BuyFuel.TabStop = false;
             this.txtMineName_BuyFuel.WatermarkText = "请选择矿点...";
@@ -691,21 +693,40 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
             // txtCarNumber_Ser
             // 
             this.txtCarNumber_Ser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCarNumber_Ser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
+            this.txtCarNumber_Ser.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.txtCarNumber_Ser.Border.Class = "TextBoxBorder";
             this.txtCarNumber_Ser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtCarNumber_Ser.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarNumber_Ser.ForeColor = System.Drawing.Color.White;
-            this.txtCarNumber_Ser.Location = new System.Drawing.Point(1187, 7);
+            this.txtCarNumber_Ser.ForeColor = System.Drawing.Color.Black;
+            this.txtCarNumber_Ser.Location = new System.Drawing.Point(1046, 6);
             this.txtCarNumber_Ser.Name = "txtCarNumber_Ser";
             this.txtCarNumber_Ser.Size = new System.Drawing.Size(150, 27);
             this.txtCarNumber_Ser.TabIndex = 14;
             this.txtCarNumber_Ser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCarNumber_Ser.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtCarNumber_Ser.WatermarkText = "请输入车牌号...";
+            // 
+            // txt_BatchNo
+            // 
+            this.txt_BatchNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_BatchNo.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txt_BatchNo.Border.Class = "TextBoxBorder";
+            this.txt_BatchNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_BatchNo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_BatchNo.ForeColor = System.Drawing.Color.Black;
+            this.txt_BatchNo.Location = new System.Drawing.Point(1202, 6);
+            this.txt_BatchNo.Name = "txt_BatchNo";
+            this.txt_BatchNo.Size = new System.Drawing.Size(124, 27);
+            this.txt_BatchNo.TabIndex = 291;
+            this.txt_BatchNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_BatchNo.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txt_BatchNo.WatermarkText = "请输入批次号...";
             // 
             // FrmBuyFuelTransport_List
             // 
@@ -759,5 +780,6 @@ namespace CMCS.CarTransport.Queue.Frms.Transport.BuyFuelTransport
         private DevComponents.DotNetBar.ButtonX btnSelectSupplier_BuyFuel;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSupplierName_BuyFuel;
         private DevComponents.DotNetBar.PanelEx panelEx1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_BatchNo;
     }
 }
