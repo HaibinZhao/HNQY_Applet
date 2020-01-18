@@ -533,3 +533,4 @@
 /CMCS.Applets/CMCS.EPCEmpower/bin/RW.LZR12_Com.dll
 /CMCS.CarTransport/CMCS.CarTransport.JxSampler/bin/*.log
 /CMCS.CarTransport/CMCS.CarTransport.Queue/bin/*.log
+/CMCS.CarTransport/CMCS.CarTransport.JxSampler/bin/CMCS.DapperDber.pdb
