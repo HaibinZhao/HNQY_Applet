@@ -16,6 +16,7 @@ using CMCS.DumblyConcealer.Tasks.AutoCupboard_NCGM.Entities;
 using CMCS.Common.Entities;
 using CMCS.Common;
 using CMCS.DumblyConcealer.Tasks.AutoCupboard_NCGM.Enums;
+using CMCS.Common.DAO;
 
 namespace CMCS.DumblyConcealer.Win.DumblyTasks
 {
@@ -87,7 +88,8 @@ namespace CMCS.DumblyConcealer.Win.DumblyTasks
 
             this.taskSimpleScheduler.StartNewTask("弃样业务处理   ", () =>
             {
-                if (DateTime.Now.Hour == 5)
+                int Hour = CommonDAO.GetInstance().GetCommonAppletConfigInt32("存样柜样品弃养时间");
+                if (DateTime.Now.Hour == Hour)
                     autoCupboard_NCGM_DAO.SynCYGPut(this.rTxtOutputer2.Output);
             }, 3600000, OutputError);
         }

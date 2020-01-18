@@ -36,5 +36,11 @@ namespace CMCS.Common.Entities.iEAA
         /// 顺序
         /// </summary>
         public int CodeOrder { get { return _CodeOrder; } set { _CodeOrder = value; } }
+
+        private string _Remark;
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remark { get { return _Remark; } set { _Remark = value; } }
     }
 }
